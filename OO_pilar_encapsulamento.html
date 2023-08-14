@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  
+    <script>
+
+        class Tv {
+            constructor() {
+                this._relacaoCanais = Array(2, 4, 5 ,7, 10)
+                this._canlAtivo = 5
+                this._volume = 5
+            }
+            //getters setters
+            get canlAtivo(){
+                return this._canlAtivo
+            }
+
+            set canlAtivo(canal) {
+                //
+                if(this._relacaoCanais.indexOf(canal) !== -1) {
+                    this._canlAtivo = canal
+                }
+                
+                
+            }
+        }
+
+        let tv = new Tv()
+
+        tv.canlAtivo = 7
+        console.log(tv.canlAtivo)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
